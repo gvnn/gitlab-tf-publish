@@ -1,6 +1,6 @@
-import { log } from '../utils/log';
-
 import execa from 'execa';
+
+import { log } from '../utils/log';
 
 export const createArguments = (tag: string, src: string) => [
   '-cvzf',

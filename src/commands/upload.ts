@@ -1,5 +1,6 @@
-import { log } from '../utils/log';
 import execa from 'execa';
+
+import { log } from '../utils/log';
 
 export const createArguments = (tag: string, file: string) => {
   if (isEmpty(process.env.TF_MODULE_NAME)) {

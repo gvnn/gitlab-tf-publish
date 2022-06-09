@@ -1,4 +1,5 @@
 import { Command } from 'commander';
+
 import { prepare } from './commands/prepare';
 import { upload } from './commands/upload';
 
