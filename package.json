@@ -21,10 +21,10 @@
   "license": "MIT",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "name": "gitlab-tf-publish",
+  "name": "@gvnn/tf-publish",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gvnn/gitlab-tf-publish.git"
+    "url": "git+https://github.com/gvnn/gvnn-tf-publish.git"
   },
   "scripts": {
     "build": "skuba build && chmod +x 'lib/index.js'",
