@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { Command } from 'commander';
 
 import { prepare } from './commands/prepare';
@@ -16,7 +18,6 @@ const uploadCmd = program.command('upload');
 uploadCmd
   .description('Upload file to gilab tf project registry')
   .argument('<tag>', 'tf module tag')
-  .argument('<file>', 'filename')
   .action(upload);
 
 program.parse(process.argv);
