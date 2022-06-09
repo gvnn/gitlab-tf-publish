@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "commander": "^9.3.0",
-    "execa": "^5.0.0"
+    "execa": "^6.1.0"
   },
   "description": "Simple CLI for upload tf modules to Gitlab registry",
   "devDependencies": {
