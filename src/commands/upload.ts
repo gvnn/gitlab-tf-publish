@@ -27,7 +27,8 @@ export const createArguments = (tag: string, file: string) => {
 const isEmpty = (str: string | undefined) =>
   !str || str.length === 0 || str === 'undefined';
 
-export const upload = async (tag: string, file: string): Promise<void> => {
+export const upload = async (tag: string): Promise<void> => {
+  const file = `${process.env.CI_PROJECT_NAME || 'module'}-${tag}.tgz`;
   log(`upload ${file} with tag ${tag}`);
 
   const { stdout } = await execa('curl', createArguments(tag, file));
