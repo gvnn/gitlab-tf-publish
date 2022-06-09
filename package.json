@@ -16,7 +16,7 @@
     "lib*/**/*.json"
   ],
   "bin": {
-    "gitlab-tf-publish": "lib/index.js"
+    "gvnn-tf-publish": "lib/index.js"
   },
   "license": "MIT",
   "main": "lib/index.js",

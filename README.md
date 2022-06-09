@@ -2,6 +2,12 @@
 
 [![Powered by skuba](https://img.shields.io/badge/🤿%20skuba-powered-009DC4)](https://github.com/seek-oss/skuba)
 
+## Install
+
+```shell
+npm i @gvnn/tf-publish
+```
+
 ## Development
 
 ### Prerequisites
