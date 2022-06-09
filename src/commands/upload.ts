@@ -13,14 +13,18 @@ export const createArguments = (tag: string, file: string) => {
 
   return [
     '--header',
-    `JOB-TOKEN: ${process.env.CI_JOB_TOKEN}`,
+    `JOB-TOKEN: ${process.env.CI_JOB_TOKEN || 'undefined'}`,
     '--upload-file',
     file,
-    `${process.env.CI_API_V4_URL}/projects/${process.env.CI_PROJECT_ID}/packages/terraform/modules/${process.env.TF_MODULE_NAME}/${process.env.TF_MODULE_SYSTEM}/${tag}/file`,
+    `${process.env.CI_API_V4_URL || 'undefined'}/projects/${
+      process.env.CI_PROJECT_ID || 'undefined'
+    }/packages/terraform/modules/${process.env.TF_MODULE_NAME || 'undefined'}/${
+      process.env.TF_MODULE_SYSTEM || 'undefined'
+    }/${tag}/file`,
   ];
 };
 
-const isEmpty = (str?: string) =>
+const isEmpty = (str: string | undefined) =>
   !str || str.length === 0 || str === 'undefined';
 
 export const upload = async (tag: string, file: string): Promise<void> => {

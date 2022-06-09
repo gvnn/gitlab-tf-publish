@@ -1,1 +1,1 @@
-export const log = console.log;
+export const log = console.log; /* eslint-disable-line no-console */

@@ -28,17 +28,17 @@ describe('prepare', () => {
     ]);
   });
 
-  it('should throw', () => {
+  it('should throw if no TF_MODULE_NAME', () => {
     process.env.CI_JOB_TOKEN = 'my-token';
     process.env.CI_API_V4_URL = 'http://www.gvnn.it/api';
     process.env.CI_PROJECT_ID = '123';
 
     expect(() =>
       createArguments('v1.2.3', 'some/random/path/to/a/file'),
-    ).toThrow();
+    ).toThrow('Invalid TF_MODULE_NAME');
   });
 
-  it('should throw', () => {
+  it('should throw if no TF_MODULE_SYSTEM', () => {
     process.env.CI_JOB_TOKEN = 'my-token';
     process.env.CI_API_V4_URL = 'http://www.gvnn.it/api';
     process.env.CI_PROJECT_ID = '123';
@@ -46,6 +46,6 @@ describe('prepare', () => {
 
     expect(() =>
       createArguments('v1.2.3', 'some/random/path/to/a/file'),
-    ).toThrow();
+    ).toThrow('Invalid TF_MODULE_SYSTEM');
   });
 });

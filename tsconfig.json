@@ -3,7 +3,7 @@
     "baseUrl": "src",
     "declaration": true,
     // TODO: set in /config/tsconfig.json
-    "isolatedModules": true,
+    "isolatedModules": false,
     "outDir": "lib",
     "removeComments": false,
     "incremental": true,
