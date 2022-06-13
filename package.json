@@ -5,7 +5,7 @@
   },
   "description": "Simple CLI for upload tf modules to Gitlab registry",
   "devDependencies": {
-    "@types/node": "^14.17.9",
+    "@types/node": "^17.0.42",
     "commitizen": "^4.2.4",
     "skuba": "*"
   },
